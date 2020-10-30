@@ -16,6 +16,25 @@
 
 <body>
 
+    <!-- navbar -->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#">Ristorante Con Fusion</a>
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ./navbar -->
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -32,6 +51,12 @@
     <!-- main content -->
     <div class="container align-items-center">
         <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">About Us</li>
+            </ol>
             <div class="col-12 col-sm-12">
                <h3>About Us</h3>
                <hr>
@@ -71,8 +96,8 @@
                 <div class="col-4 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
