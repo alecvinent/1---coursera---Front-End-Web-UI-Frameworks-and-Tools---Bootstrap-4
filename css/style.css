@@ -36,3 +36,12 @@ address {
 .navbar-dark {
     background-color: #512da8;
 }
+
+label {
+    font-weight: bold;
+}
+
+::placeholder {
+    color: rgba(148, 138, 138, 0.808);
+    font-style: italic;
+}

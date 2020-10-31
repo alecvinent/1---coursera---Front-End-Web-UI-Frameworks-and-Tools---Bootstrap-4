@@ -92,7 +92,73 @@
               <h3>Send us your Feedback</h3>
            </div>
             <div class="col-12 col-md-9">
-                Form goes here
+                <form>
+                    <div class="form-group row">
+                      <label for="firstname" class="col-md-2 col-form-label">First Name</label>
+                      <div class="col-md-10">
+                        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="First Name" aria-describedby="firstname-help">
+                        <small id="firstname-help" class="text-muted">Help text</small>
+                      </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                          <input type="text" name="lastname" id="lastname" class="form-control" placeholder="First Name" aria-describedby="lastname-help">
+                          <small id="lastname-help" class="text-muted">Help text</small>
+                        </div>
+                      </div>                                         
+                    
+                    <div class="form-group row">
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+                        <div class="col-5 col-md-3">
+                          <input type="tel" name="telnum" id="areacode" class="form-control" placeholder="Area Code" aria-describedby="areacode-help">
+                          <small id="areacode-help" class="text-muted">Help text</small>
+                        </div>
+                        <div class="col-7 col-md-7">
+                            <input type="tel" name="telnum" id="telnum" class="form-control" placeholder="Tel. Number" aria-describedby="telnum-help">
+                            <small id="telnum-help" class="text-muted">Help text</small>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">E-mail</label>
+                        <div class="col-md-10">
+                          <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" aria-describedby="email-help">
+                          <small id="email-help" class="text-muted">Help text</small>
+                        </div>
+                      </div>  
+
+                      <div class="form-group row">
+                          <div class="col-md-6 offset-md-2">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="aprove" id="aprove" value="checkedValue" checked>
+                                <label class="form-check-label" for="aprove">                                    
+                                    May we contact you?
+                                  </label>
+                              </div>
+                          </div>
+                          <div class="col-md-3 offset-1">
+                            <select class="form-control" name="contact_way" id="contact_way">
+                                <option value="telephone">Telephone</option>
+                                <option value="email">Email</option>
+                            </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="feedback" id="feedback" rows="12" placeholder="Your Feedback"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <div class="offset-md-2 col-md-10">
+                              <button type="submit" class="btn btn-primary">Send Feedback</button>
+                          </div>
+                      </div>
+                </form>
             </div>
              <div class="col-12 col-md">
             </div>
