@@ -73,11 +73,71 @@
               >
             </li>
           </ul>
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
     <!-- ./navbar -->
 
+    <!-- login -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <form action="">
+                <div class="modal-body">            
+                    
+                    <div class="form-row">
+
+                      <!-- username -->
+                      <div class="form-group col-sm-4">
+                        <label for="username" class="sr-only">Email</label>
+                        <input type="email" class="form-control" name="username" id="username" placeholder="Enter email">
+                      </div>
+                      <!-- ./username -->
+                      <!-- password -->
+                      <div class="form-group col-sm-4">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                      </div>
+                      <!-- ./password -->
+                      <!-- remember -->
+                      <div class="col-sm-auto">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" name="remember" id="remember" value="checkedValue" checked>
+                          <label class="form-check-label" for="remember">Remember me</label>
+                        </div>
+                      </div>
+                      <!-- ./remember -->
+
+                    </div>
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                </div>
+              </form>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- ./login -->
+
+    <!-- header -->
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -95,13 +155,18 @@
                 <img src="img/logo.png" alt="logo" class="img-fluid" />
               </div>
               <div class="col-12 col-sm align-self-center mt-2">                
-                <a href="#reservation-section" class="btn btn-warning btn-sm btn-block text-dark font-weight-bold text-center">Reserve Table</a>
+                <a href="#reservation-section" class="btn btn-warning btn-sm btn-block text-dark font-weight-bold text-center" 
+                data-toggle="tooltip" 
+                data-html="true" 
+                title="Or Call us to <br><strong>+852 12345678</strong"
+                  data-placement="bottom">Reserve Table</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <!-- ./header -->
 
     <!-- main content -->
     <div class="container">
@@ -320,6 +385,19 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+      
+      // modal
+      $('#exampleModal').on('show.bs.modal', event => {
+        var button = $(event.relatedTarget);
+        var modal = $(this);
+        // Use above variables to manipulate the DOM
+        
+      });
+    });      
+    </script>
   </body>
 </html>
 <!-- navbar -->
