@@ -37,7 +37,7 @@ address {
   background-color: #512da8;
 }
 
-label {
+.col-form-label {
   font-weight: bold;
 }
 
