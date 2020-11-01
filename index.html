@@ -270,7 +270,7 @@
       <!-- carousel -->
       <div class="row row-content">
         <div class="col">
-          <div id="carouselId" class="carousel slide" data-ride="carousel">            
+          <div id="carousel-main" class="carousel slide" data-ride="carousel">            
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <img src="img/uthappizza.png" alt="First slide" class="d-block img-fluid">
@@ -310,19 +310,31 @@
             </div>
             
             <ol class="carousel-indicators">
-              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselId" data-slide-to="1"></li>
-              <li data-target="#carouselId" data-slide-to="2"></li>
+              <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-main" data-slide-to="1"></li>
+              <li data-target="#carousel-main" data-slide-to="2"></li>
             </ol>
 
-            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carousel-main" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+            </a>            
+            <a class="carousel-control-next" href="#carousel-main" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
+
+            <!-- extra buttons -->
+            <div class="btn-group" id="carousel-btn">
+              <button class="btn btn-danger btn-sm" id="carousel-pause">
+                <i class="fa fa-pause" aria-hidden="true"></i>
+              </button>
+              <button class="btn btn-danger btn-sm" id="carousel-play">
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+            <!-- ./extra buttons -->
+
           </div>
         </div>
       </div>
@@ -402,6 +414,26 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      // carousel settings
+      $('#carousel-main').carousel({
+        interval: 2000
+      });
+
+      $('#carousel-pause').click(function(){
+        $('#carousel-main').carousel('pause');
+      });      
+
+      $('#carousel-play').click(function(){
+        $('#carousel-main').carousel('cycle');
+      });      
+
+      $('#carousel-main').on('slide.bs.carousel', function () {
+        // do something…
+      });
+    });
+    </script>
     
   </body>
 </html>
