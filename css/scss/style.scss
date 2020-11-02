@@ -4,6 +4,7 @@ $lt-gray: #ddd;
 $background-dark: #512da8;
 $backgroudn-light: #9575cd;
 $background-pale: #d1c4e9;
+$background-floral: floralwhite;
 
 $carousel-item-height: 300px;
 
@@ -83,4 +84,19 @@ address {
   right: 0;
   position: absolute;
   bottom: 0;
+}
+
+.modal-header {
+  background-color: $background-dark;
+  color: $background-floral;
+}
+
+.modal-body {
+  background-color: $background-pale;
+}
+
+.modal-header {
+  .close {
+    color: $background-floral !important;
+  }
 }
