@@ -67,3 +67,6 @@ address {
 
 .modal-header .close {
   color: floralwhite !important; }
+
+a:hover {
+  border-bottom: 1px dotted #ddd; }

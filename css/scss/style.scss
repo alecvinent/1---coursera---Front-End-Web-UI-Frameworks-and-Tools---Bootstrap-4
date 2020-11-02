@@ -100,3 +100,7 @@ address {
     color: $background-floral !important;
   }
 }
+
+a:hover {
+  border-bottom: 1px dotted $lt-gray;
+}
